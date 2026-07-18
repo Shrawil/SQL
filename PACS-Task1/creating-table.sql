@@ -14,6 +14,7 @@ create table employees(
   ename varchar(20) not null,
   job varchar(15),
   salary int check (salary > 0),
+  deptno int
 );
 
 -- Projects
@@ -31,7 +32,7 @@ create table projects(
 
 -- EmpProjectTasks
 create table empProjectTasks(
-  project_id int(3) primary key,
+  project_id int(3),
   empno int(4),
   start_date date,
   end_date date,
