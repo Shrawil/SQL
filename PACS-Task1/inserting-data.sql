@@ -13,6 +13,13 @@ INSERT INTO empprojecttasks VALUES
 (402, 7002, '2011-08-22', '2011-09-30', 'System Design', 'Completed'),
 (402, 7004, '2011-10-01', NULL, 'Coding', 'In Progress');
 
+-- Clients
+INSERT INTO clients VALUES
+(1001, 'ACME Utilities', 'Noida', 'contact@acmeutil.com', '9567880032', 'Manufacturing'),
+(1002, 'Trackon Consultants', 'Mumbai', 'consult@trackon.com', '8734210030', 'Consultant'),
+(1003, 'MoneySaver Distributors', 'Kolkata', 'save@moneysaver.com', '7799886655', 'Reseller'),
+(1004, 'Lawful Corp', 'Chennai', 'justice@lawful.com', '9210342219', 'Professional');
+
 -- Employees
 INSERT INTO employees VALUES
 (7001, 'Sandeep', 'Analyst', 25000, 10),
