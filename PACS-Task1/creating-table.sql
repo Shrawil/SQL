@@ -41,3 +41,13 @@ create table empProjectTasks(
   foreign key (project_id) references projects(project_id),
   foreign key (empno) references employees(empno)
 );
+
+-- 18.	Display Client name whose project’s ‘Coding’ task is ‘in progress’.
+-- cname from client, descr from projects, status from empprojecttasks
+select c.cname as 'Client', p.descr as 'Project', t.status as 'Status'
+from projects as p
+join clients as c 
+	on c.client_id = p.client_id
+join empprojecttasks t 
+	on p.project_id = t.project_id
+where t.status = 'In progress';
