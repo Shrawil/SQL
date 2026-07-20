@@ -109,3 +109,14 @@ WHERE empno IN (
     FROM empprojecttasks
     WHERE task = 'Testing'
 );
+
+-- 18. Select name of client whose project is 'Coding' and task progress is 'in progress'.
+-- Empprojecttask -> Projects -> Clients
+select p.project_id, c.cname
+from clients as c
+join projects as p
+on c.client_id = p.client_id
+join empprojecttasks as t
+on p.project_id = t.project_id
+where task = 'Coding' 
+AND status = 'In Progress';
