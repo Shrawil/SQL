@@ -100,3 +100,12 @@ join empprojecttasks t
 on e.empno = t.empno
 set salary = salary * 1.15
 where t.task = 'Testing';
+
+-- For online compilers
+UPDATE employees
+SET salary = salary * 1.15
+WHERE empno IN (
+    SELECT empno
+    FROM empprojecttasks
+    WHERE task = 'Testing'
+);
